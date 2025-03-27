@@ -31,7 +31,7 @@ async def handle_review(message: types.Message):
     )
     
     await bot.send_message(ADMIN_ID, f"Новый отзыв от @{message.from_user.username}:")
-await bot.send_message(ADMIN_ID, f"{message.text}", reply_markup=keyboard)
+    await bot.send_message(ADMIN_ID, f"{message.text}", reply_markup=keyboard)
     await message.reply("Ваш отзыв отправлен на проверку.")
 
 @dp.callback_query_handler(Text(startswith="approve_"))
