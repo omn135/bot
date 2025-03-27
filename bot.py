@@ -39,7 +39,7 @@ async def approve_review(callback_query: types.CallbackQuery):
     review_id = int(callback_query.data.split('_')[1])
     if review_id in pending_reviews:
         review = pending_reviews.pop(review_id)
-       await bot.send_message(CHANNEL_ID, f"📝 Отзыв: Ваш текст тут")
+        await bot.send_message(CHANNEL_ID, f"📝 Отзыв: Ваш текст тут")
         await callback_query.answer("Отзыв опубликован!")
     else:
         await callback_query.answer("Ошибка: отзыв не найден.")
