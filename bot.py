@@ -30,7 +30,7 @@ async def handle_review(message: types.Message):
         InlineKeyboardButton("❌ Отклонить", callback_data=f"reject_{review_id}")
     )
     
-    await bot.send_message(ADMIN_ID, f"Новый отзыв от @{message.from_user.username}:
+    await bot.send_message(ADMIN_ID, f"Новый отзыв от @{message.from_user.username}:")
 {message.text}", reply_markup=keyboard)
     await message.reply("Ваш отзыв отправлен на проверку.")
 
